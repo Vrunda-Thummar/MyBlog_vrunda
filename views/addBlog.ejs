@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blog</title>
+</head>
+
+<body style="background-image:url(https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1725148800&semt=ais_hybrid); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+    <div>
+        <h1 style="text-align: center; color:beige; margin-top: 60px; ">Add a New Blog</h1>
+        <form action="/add-blog" method="POST">
+            <div style="margin-bottom: 15px; display:flex; justify-content: center; margin-top: 50px; ">
+                <label for="title" style=" font-weight: bold; margin-bottom: 5px; color: beige; font-size: larger;">Title : </label>
+                <input type="text" id="title" name="title" style="margin-left: 5px ;" required>
+            </div>
+            <div style="margin-bottom: 15px; display:flex; justify-content: center; margin-top: 30px;">
+                <label for="content" style="font-weight: bold; margin-bottom: 5px; color: beige; font-size: larger;">Content : </label>
+                <textarea rows="10" cols="50" id="content" name="content" style="margin-left: 5px ;" required></textarea>
+            </div>
+            <div style="display: flex; justify-content: center; margin-top: 45px;">
+                <button type="submit" style=" width: 100px; padding: 10px; background-color:beige; color: black; border: none; border-radius: 5px; font-size: 16px; margin-top: 10px; ">Add Blog</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

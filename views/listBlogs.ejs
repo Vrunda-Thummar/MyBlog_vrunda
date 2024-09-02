@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blogs</title>
+    <!-- <style>
+        body {
+        
+        }
+
+        .container {
+           
+        }
+
+        h1 {
+            
+        }
+
+        .blog-post {
+            
+        }
+
+        .blog-post h2 {
+            
+        }
+
+        .blog-post p {
+            
+        }
+
+        .blog-post small {
+            
+        }
+
+        a {
+        }
+
+        a:hover {
+            background-color: #0056b3; /* Darker shade for link hover effect */
+        }
+    </style> -->
+</head>
+
+<body
+    style="font-family: Arial, sans-serif; background: linear-gradient(to top, pink, black); color: #333; margin: 0; padding: 0;">
+    <div
+        style=" max-width: 800px; margin: 50px auto; background: #f5f1f4; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h1 style="text-align: center; color: black; margin-bottom: 30px;">All Blogs</h1>
+        <% blogs.forEach(blog=> { %>
+            <div style="padding: 15px; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <div style="display: flex; justify-content: space-between;">
+                    <h2 style="color: #333; margin-top: 0;">
+                        <%= blog.title %>
+                    </h2>
+                    <div style="float: right;">
+                        <p style="color: red; font-size: 0.9em;">Posted on <%= blog.date.toDateString() %></p>
+                    </div>
+                </div>
+                <p style="margin: 10px 0; line-height: 1.6;">- <%= blog.content %></p>
+            </div>
+            <% }) %>
+                <a href="/add-blog" style="display: block; text-align: center; margin-top: 30px; padding: 10px; background-color:black; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Add a New Blog</a>
+    </div>
+    <form action="/logout" method="GET" style="display: flex; justify-content: center; margin-top: 10px;">
+        <button type="submit" style=" width: 100px; padding: 10px; background-color:black; color: white; border: none; border-radius: 5px; font-size: 16px; margin-top: 10px; ">Logout</button>
+    </form>
+</body>
+
+</html>
