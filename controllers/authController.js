@@ -23,7 +23,7 @@ exports.loginUser = async (req, res) => {
         }
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
-            return res.status(400).send('Invalid credentials');
+            return res.status(400).send('Invalid password');
         }
         const token = jwt.sign({ id: user._id }, 'your_jwt_secret');
         res.cookie('token', token, { httpOnly: true });
